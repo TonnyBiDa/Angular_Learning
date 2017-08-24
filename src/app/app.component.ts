@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-
+//--------------------------------------------------------------
+//-----Component and try two-way binding by using ngModel ------
+//-----Angular2 should import FormsModel before using ngModel---
+//--------------------------------------------------------------
 @Component({
   selector: 'app-root',
-  template: `<h3 (click)="onSelect()" [class.clicked]="showdetails===true">
+  template: `<h3 (click)="onSelect()" [class.clicked]="showdetails===true"> 
   			{{table.lastName}} {{table.firstName}}
   			</h3>
   			<input type="text" [(ngModel)]= "table.lastName" >
